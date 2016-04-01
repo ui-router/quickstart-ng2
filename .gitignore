@@ -2,3 +2,6 @@ typings/
 node_modules/
 *.js
 *.js.map
+*.ipr
+*.iml
+*.iws
