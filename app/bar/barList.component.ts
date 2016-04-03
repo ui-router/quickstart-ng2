@@ -2,13 +2,22 @@ import {Component, Inject} from 'angular2/core';
 import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 import {CORE_DIRECTIVES} from "angular2/common";
 
+/**
+ * This component injects "barList" (resolve data)
+ *
+ * It creates a list of uiSref (links) to the bar details and highlights the active uiSref
+ * It provides a <ui-view> viewport for a child state to fill in
+ */
+
 let template = `
 <h3>Bar Component</h3>
+
 <ul>
   <li *ngFor="#bar of bars">
     <a uiSref=".details" [uiParams]="{barId: bar.id}" uiSrefActive="active">{{bar.name}}</a>
   </li>
 </ul>
+
 <ui-view></ui-view>
 `;
 

@@ -1,6 +1,12 @@
 import {Component} from 'angular2/core';
 import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
+/**
+ * The top level application component.
+ * 
+ * This component renders two uiSref "links" and has a viewport for a child to fill in.
+ */
+
 let template = `
 <h1>My First Angular 2 UI-Router App</h1>
 

@@ -1,10 +1,12 @@
-import {Component, Inject} from 'angular2/core';
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
+import {Component} from 'angular2/core';
 
+/**
+ * This is a simple component used as the component for the app.foo.nest1 state
+ * to demonstrate grandchildren states
+ */
 let template = ` <h5>Nest 1 component</h5> `;
 
 @Component({
-  directives: [UIROUTER_DIRECTIVES],
   selector: 'nest1',
   template: template
 })
