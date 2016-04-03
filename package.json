@@ -1,6 +1,6 @@
 {
   "name": "ui-router-ng2-quickstart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
