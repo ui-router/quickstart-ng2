@@ -8,6 +8,7 @@ Install the npm packages described in the `package.json` and verify that it work
 git clone https://github.com/ui-router/quickstart-ng2.git
 cd quickstart-ng2
 npm install
+npm run tsc
 npm start
 ```
 
