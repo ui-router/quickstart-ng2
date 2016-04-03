@@ -5,7 +5,7 @@ let template = `
 <h3>Foo Component</h3>
 <a uiSref=".nest1">Nested state 1</a>
 <a uiSref=".nest2">Nested state 2</a>
-before<ui-view>asdfasfd</ui-view>after
+<ui-view></ui-view>
 `;
 
 @Component({
