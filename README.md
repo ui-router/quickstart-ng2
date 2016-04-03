@@ -5,10 +5,10 @@
 Install the npm packages described in the `package.json` and verify that it works:
 
 ```bash
-$ git clone https://github.com/ui-router/quickstart-ng2.git
-# cd quickstart-ng2
-$ npm install
-$ npm start
+git clone https://github.com/ui-router/quickstart-ng2.git
+cd quickstart-ng2
+npm install
+npm start
 ```
 
 You're ready to write your application.
