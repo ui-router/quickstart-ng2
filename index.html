@@ -15,19 +15,30 @@
     <!-- 2. Configure SystemJS -->
     <script>
       System.config({
+          
         packages: {        
           app: {
             format: 'register',
             defaultExtension: 'js'
+          },
+          node_modules: {
+              defaultExtension: 'js'
           }
+        },
+        
+        map: {
+          "ui-router-ng2": "node_modules/ui-router-ng2/ng2",
+          "angular2/http": "node_modules/angular2/http",
+          "rxjs": "node_modules/rxjs"
         }
+  
       });
-      System.import('app/main')
+      System.import('app/_bootstrap/bootstrap')
             .then(null, console.error.bind(console));
     </script>
   </head>
   <!-- 3. Display the application -->
   <body>
-    <my-app>Loading...</my-app>
+    <ui-view>Loading...</ui-view>
   </body>
 </html>

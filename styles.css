@@ -19,6 +19,11 @@ body, input[text], button {
 a {
   cursor: pointer;
   cursor: hand;
+  color: #0000bc;
+  text-decoration: none;
+}
+a.active {
+    font-weight: bolder;
 }
 button {
   font-family: Arial;

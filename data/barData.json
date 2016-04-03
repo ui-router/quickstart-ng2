@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "thing", "description": "This is a foo thing" },
+  { "id": 2, "name": "fighters", "description": "Foo Fighters" },
+  { "id": 3, "name": "manchu", "description": "Foo manchu" }
+]
