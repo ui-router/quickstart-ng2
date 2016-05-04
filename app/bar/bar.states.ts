@@ -1,4 +1,4 @@
-import {Http} from "angular2/http";
+import {Http} from "@angular/http";
 import {BarListComponent} from "./barList.component";
 import {BarDetailsComponent} from "./barDetail.component";
 
