@@ -22,7 +22,7 @@ let template = `
 `;
 
 @Component({
-    directives: [UIROUTER_DIRECTIVES, CORE_DIRECTIVES],
+    directives: [UIROUTER_DIRECTIVES],
     selector: 'bar',
     template: template
 })
