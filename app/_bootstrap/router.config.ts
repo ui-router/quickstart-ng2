@@ -1,7 +1,7 @@
 import {UIRouter} from "ui-router-ng2/router";
 import {INITIAL_STATES} from "../app.states";
-import {Http} from "angular2/http";
-import {Injectable, Injector} from "angular2/core";
+import {Http} from "@angular/http";
+import {Injectable, Injector} from "@angular/core";
 
 /**
  * This class should is added to the Angular 2 bootstrap() providers and is injected by the

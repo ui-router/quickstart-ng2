@@ -1,6 +1,5 @@
-import {Component, Inject} from 'angular2/core';
+import {Component, Inject} from '@angular/core';
 import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
-import {CORE_DIRECTIVES} from "angular2/common";
 
 /**
  * This component injects "barList" (resolve data)
@@ -13,7 +12,7 @@ let template = `
 <h3>Bar Component</h3>
 
 <ul>
-  <li *ngFor="#bar of bars">
+  <li *ngFor="let bar of bars">
     <a uiSref=".details" [uiParams]="{barId: bar.id}" uiSrefActive="active">{{bar.name}}</a>
   </li>
 </ul>

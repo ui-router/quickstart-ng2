@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 /**
  * This is a simple component used as the component for the app.foo.nest1 state

@@ -8,7 +8,7 @@
   // map tells the System loader where to look for things
   var map = {
     'app':                        'app', // 'dist',
-    "ui-router-ng2": "node_modules/ui-router-ng2/ng2",
+    'ui-router-ng2':              'node_modules/ui-router-ng2/_bundles/ui-router-ng2.js',
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular',
