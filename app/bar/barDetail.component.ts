@@ -16,6 +16,6 @@ let template = `
   template: template
 })
 export class BarDetailsComponent {
-  // resolve data injected by name 'barDetail' into 'bar' property
-  constructor(@Inject("barDetail") public bar) { }
+  // `barDetail` resolve data as an input
+  @Input('barDetail') bar;
 }

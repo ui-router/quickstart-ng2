@@ -8,12 +8,15 @@ import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
  */
 
 let template = `
+
 <h1>My First Angular 2 UI-Router App</h1>
 
 <a uiSref="app.foo" uiSrefActive="active">Foo</a>
 <a uiSref="app.bar" uiSrefActive="active">Bar</a>
 
 <ui-view></ui-view>
+
+<ui-view name="footer"></ui-view>
 `;
 
 @Component({
