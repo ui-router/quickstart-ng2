@@ -38,7 +38,7 @@ export let BAR_STATES = [
     // This state fills the unnnamed <ui-view> (in `BarListComponent` from  `app.foo` state) with `BarDetailsComponent`
     // Has a parameter :barId which appears in the URL
     // Resolves barDetail, then the component displays the data
-    { name: 'app.bar.details', url: '/:barId', component: BarDetailsComponent, resolve: { barDetail } },
+    { name: 'app.bar.details', url: '/?barId', component: BarDetailsComponent, resolve: { barDetail } },
 ];
 
 

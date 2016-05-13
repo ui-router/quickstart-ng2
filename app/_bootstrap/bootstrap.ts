@@ -2,7 +2,9 @@ import {trace, UIROUTER_PROVIDERS, UiView, UIRouterConfig, Category, UIROUTER_DI
 import {MyUIRouterConfig} from "./router.config";
 import {HTTP_PROVIDERS} from "@angular/http";
 import {provide, PLATFORM_DIRECTIVES} from "@angular/core";
+import {LocationStrategy, HashLocationStrategy, PathLocationStrategy, PlatformLocation} from "@angular/common";
 import {bootstrap} from '@angular/platform-browser-dynamic';
+import {BrowserPlatformLocation} from '@angular/platform-browser';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
@@ -12,6 +14,10 @@ import 'rxjs/add/operator/map';
 trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
 bootstrap(UiView, [
+    // provide(LocationStrategy, { useClass: HashLocationStrategy }),
+    provide(LocationStrategy, { useClass: PathLocationStrategy }),
+    provide(PlatformLocation, { useClass: BrowserPlatformLocation }),
+
     ...UIROUTER_PROVIDERS,
     ...HTTP_PROVIDERS,
 

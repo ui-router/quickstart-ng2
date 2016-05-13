@@ -8,8 +8,8 @@ import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 let template = `
 <h3>Foo Component</h3>
 
-<a uiSref=".nest1">Nested state 1</a>
-<a uiSref=".nest2">Nested state 2</a>
+<a uiSref=".nest1" uiSrefActive="active">Nested state 1</a>
+<a uiSref=".nest2" uiSrefActive="active">Nested state 2</a>
 
 <ui-view></ui-view>
 `;
