@@ -11,8 +11,9 @@ let template = `
 
 <h1>My First Angular 2 UI-Router App</h1>
 
-<a uiSref="app.foo" uiSrefActive="active">Foo</a>
-<a uiSref="app.bar" uiSrefActive="active">Bar</a>
+<a uiSref="app.foo" [uiOptions]="{ inherit: false }" uiSrefActive="active">Foo</a>
+<a uiSref="app.bar" [uiOptions]="{ inherit: false }" uiSrefActive="active">Bar</a>
+<a uiSref="app.baz" [uiOptions]="{ inherit: false }" uiSrefActive="active">Baz</a>
 
 <ui-view></ui-view>
 

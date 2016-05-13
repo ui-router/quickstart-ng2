@@ -2,14 +2,9 @@ import {Component, Input} from '@angular/core';
 import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
- * This component injects "barDetail" (resolve data) and renders the detail
- */
+ * This component injects "barDetail" (resolve data) into the matching @Input and renders the detail */
 let template = `
 <h5>Bar Details</h5>
-
-<a uiSrefActive="active" uiSref="." [uiParams]="{ '#': 'asdf' }">anchor asdf</a>
-<a uiSrefActive="active" uiSref="." [uiParams]="{ '#': 'fhqwhgads' }">anchor fhqwhgads</a>
-<br>
 
 <label>Id: </label><input type="text" [value]="bar.id"><br>
 <label>Name: </label><input type="text" [value]="bar.name"><br>
@@ -22,6 +17,6 @@ let template = `
   directives: [UIROUTER_DIRECTIVES]
 })
 export class BarDetailsComponent {
-  // `barDetail` resolve data as an input
+  // `barDetail` resolve data is provided to this @Input
   @Input('barDetail') bar;
 }

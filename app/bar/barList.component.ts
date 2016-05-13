@@ -2,7 +2,7 @@ import {Component, Inject} from '@angular/core';
 import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
- * This component injects "barList" (resolve data)
+ * This component has "barList" (resolve data) injected into the constructor.
  *
  * It creates a list of uiSref (links) to the bar details and highlights the active uiSref
  * It provides a <ui-view> viewport for a child state to fill in
