@@ -9,7 +9,7 @@ import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 let template = `
 
-<h1>My First Angular 2 UI-Router App</h1>
+<h1>My First UI-Router Angular 2 App</h1>
 
 <a uiSref="app.foo" [uiOptions]="{ inherit: false }" uiSrefActive="active">Foo</a>
 <a uiSref="app.bar" [uiOptions]="{ inherit: false }" uiSrefActive="active">Bar</a>

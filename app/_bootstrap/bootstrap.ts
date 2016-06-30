@@ -1,4 +1,4 @@
-import {trace, UIROUTER_PROVIDERS, UiView, UIRouterConfig, Category, UIROUTER_DIRECTIVES} from "ui-router-ng2";
+import {trace, UIROUTER_PROVIDERS, UIView, UIRouterConfig, Category, UIROUTER_DIRECTIVES} from "ui-router-ng2";
 import {MyUIRouterConfig} from "./router.config";
 import {HTTP_PROVIDERS} from "@angular/http";
 import {provide, PLATFORM_DIRECTIVES} from "@angular/core";
@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';
 // - VIEWCONFIG ui-view component creation/destruction and viewconfig de/activation
 trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
-bootstrap(UiView, [
+bootstrap(UIView, [
     // provide(LocationStrategy, { useClass: HashLocationStrategy }),
     provide(LocationStrategy, { useClass: PathLocationStrategy }),
     provide(PlatformLocation, { useClass: BrowserPlatformLocation }),

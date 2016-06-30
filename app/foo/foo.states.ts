@@ -12,7 +12,7 @@ import {FooFooterComponent} from "./fooFooter.component";
 /**
  * The 'foo' submodule's states.
  */
-export let FOO_STATES: Ng2StateDeclaration = [
+export let FOO_STATES: Ng2StateDeclaration[] = [
     // A state for the 'app.foo' submodule,
     // It fills the unnamed <ui-view> ($default) (in the AppComponent from the `app` state) with `FooComponent`
     {

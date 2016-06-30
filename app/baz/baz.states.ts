@@ -2,30 +2,16 @@ import {Http} from "@angular/http";
 import {BazListComponent} from "./bazList.component";
 import {BazDetailsComponent} from "./bazDetail.component";
 import {BazFooterComponent} from "./bazFooter.component";
+import {Ng2StateDeclaration, Transition} from "ui-router-ng2";
 /**
  * This file defines the states for the `baz` module.
- * The states are exported as an array.  
+ * The states are exported as an array.
  * The parent module imports this array and concats them into the master state list.
  */
 
-
-/** Resolves for baz states */
-// Note: see bootstrap/router.config.ts for notes on temporary string-based resolve injection (Angular 1 style)
-
-const reject = (message) => new Promise((resolve, reject) => reject(message));
-
-// Inject 'http' and fetch all the baz data
-const bazList = (http: Http) =>
-    http.get('/data/bazData.json').map(res => res.json()).toPromise();
-
-
-// Inject the bazList (from the parent) and find the correct
-const bazDetail = (bazList, $transition$) =>
-    bazList.find(item => item.id == $transition$.params().bazId) || reject(`Unable to find baz #${$transition$.params().bazId}`);
-
-
 /** The 'baz' submodule's states. */
-export let BAZ_STATES = [
+export let BAZ_STATES: Ng2StateDeclaration[] = [
+
   // A state for the 'app.baz' submodule.
   // - Fills in the unnamed ($default) <ui-view> from `app` state with `BazListComponent`
   // - Fills in the footer <ui-view name="footer"> from `app` state with `BazFooterComponent`
@@ -37,7 +23,11 @@ export let BAZ_STATES = [
       $default: { component: BazListComponent },
       footer: { component: BazFooterComponent }
     },
-    resolve: { bazList }
+    resolve: [
+      // Inject 'Http' and fetch all the baz data
+      { token: 'bazList', deps: [Http], resolveFn: (http: Http) =>
+        http.get('/data/bazData.json').map(res => res.json()).toPromise() }
+    ]
   },
 
   // A child state of app.baz
@@ -51,7 +41,11 @@ export let BAZ_STATES = [
     views: {
       '$default@app': { component: BazDetailsComponent }
     },
-    resolve: { bazDetail }
+    resolve: [
+      // Inject the bazList (from the parent) and find the correct
+      { token: 'bazDetail', deps: ['bazList', Transition], resolveFn: (bazList, trans) =>
+          bazList.find(item => item.id == trans.params().bazId) }
+    ]
   },
 ];
 
