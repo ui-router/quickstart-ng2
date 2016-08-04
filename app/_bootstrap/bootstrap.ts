@@ -14,7 +14,9 @@ import 'rxjs/add/operator/map';
 trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
 bootstrap(UIView, [
+    // Hashbang mode
     // provide(LocationStrategy, { useClass: HashLocationStrategy }),
+    // HTML5 push state mode
     provide(LocationStrategy, { useClass: PathLocationStrategy }),
     provide(PlatformLocation, { useClass: BrowserPlatformLocation }),
 

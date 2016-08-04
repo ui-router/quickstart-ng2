@@ -3,7 +3,9 @@ import {INITIAL_STATES} from "../app.states";
 import {Injectable, Injector} from "@angular/core";
 
 /**
- * This class should is added to the Angular 2 bootstrap() providers and is injected by the
+ * Create your own UIRouterConfig class
+ *
+ * This class should be added to the Angular 2 bootstrap() providers and is injected by the
  * UIRouter provider.  The UIRouter provider will then invoke this classes configure()
  * function and pass in the UIRouter instance, which we configure.  After configuration,
  * UIRouter syncs up with the current URL.
