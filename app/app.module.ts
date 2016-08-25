@@ -15,7 +15,6 @@ import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
 
-import {AppComponent}  from './app.component';
 
 
 // Enables tracing (check the console) of:
@@ -30,9 +29,7 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
     HttpModule,
   ],
   declarations: [
-    // AppComponent,
-    UIROUTER_DIRECTIVES,
-
+    UIROUTER_DIRECTIVES
   ],
   providers: [
     ...UIROUTER_PROVIDERS,
@@ -41,10 +38,7 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
   ],
 
-  bootstrap: [
-    UIView,
-    // AppComponent
-  ]
+  bootstrap: [UIView]
 
 })
 export class AppModule {
