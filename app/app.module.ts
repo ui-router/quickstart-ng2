@@ -3,9 +3,8 @@ import {HttpModule} from '@angular/http';
 /**
  * Created by ramor11 on 8/10/2016.
  */
-import {NgModule, NgModuleFactoryLoader}  from '@angular/core';
+import {NgModule}  from '@angular/core';
 import {BrowserModule}  from '@angular/platform-browser';
-import {FormsModule}    from '@angular/forms';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 
@@ -25,7 +24,6 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
   ],
   declarations: [
