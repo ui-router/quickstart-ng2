@@ -30,7 +30,7 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
     HttpModule,
   ],
   declarations: [
-    AppComponent,
+    // AppComponent,
     UIROUTER_DIRECTIVES,
 
   ],
@@ -43,7 +43,7 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
   bootstrap: [
     UIView,
-    AppComponent
+    // AppComponent
   ]
 
 })
