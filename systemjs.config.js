@@ -16,24 +16,38 @@
 
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
-    'app':                        { main: '_bootstrap/bootstrap.js',  defaultExtension: 'js' },
+    'app':                        { main: '_bootstrap/main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
   };
 
-  var packageNames = [
-    'common', 'compiler', 'core',
-    'http', 'platform-browser',
+  var ngPackageNames = [
+    'common',
+    'compiler',
+    'core',
+    'forms',
+    'http',
+    'platform-browser',
     'platform-browser-dynamic',
+    'router',
     'router-deprecated',
-    'testing', 'upgrade'
+    'testing',
+    'upgrade'
   ];
 
-  // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
-  packageNames.forEach(function(pkgName) {
-    var fullname = "@angular/" + pkgName;
-    packages[fullname] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
-  });
+// Individual files (~300 requests):
+  function packIndex(pkgName) {
+    packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
+  }
+  // Bundled (~40 requests):
+  function packUmd(pkgName) {
+    packages['@angular/'+pkgName] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
+  }
+  // Most environments should use UMD; some (Karma) need the individual index files
+  var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
+  // Add package entries for angular packages
+  ngPackageNames.forEach(setPackageConfig);
+
 
   var config = {
     map: map,
