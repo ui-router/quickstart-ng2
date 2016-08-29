@@ -5,11 +5,8 @@ import {BarFooterComponent} from "./barFooter.component";
 import {Ng2StateDeclaration, Transition} from "ui-router-ng2";
 /**
  * This file defines the states for the `bar` module.
- * The states are exported as an array.
- * The parent module imports this array and concats them into the master state list.
+ * The states are exported as an array and imported in the BarModule.
  */
-
-/** The 'bar' submodule's states. */
 export let BAR_STATES: Ng2StateDeclaration[] = [
     // A state for the 'app.bar' submodule.
     // - Fills in the unnamed <ui-view> ($default) from `app` state with `BarListComponent`

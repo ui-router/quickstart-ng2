@@ -1,5 +1,4 @@
 import {Component, Input} from '@angular/core';
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * This component receives `bazDetail` resolve data into the `bazDetail` input, then renders the detail
@@ -19,7 +18,6 @@ let template = `
   template: template,
   // `bazDetail` resolve data is provided to the `bazDetail` input
   inputs: ["bazDetail"],
-  directives: [UIROUTER_DIRECTIVES]
 })
 export class BazDetailsComponent {
   bazDetail;

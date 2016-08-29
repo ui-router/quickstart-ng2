@@ -1,5 +1,4 @@
 import {Component, Input} from '@angular/core';
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * This component injects "barDetail" (resolve data) into the matching @Input and renders the detail */
@@ -13,8 +12,7 @@ let template = `
 
 @Component({
   selector: 'bar-detail',
-  template: template,
-  directives: [UIROUTER_DIRECTIVES]
+  template: template
 })
 export class BarDetailsComponent {
   // `barDetail` resolve data is provided to this @Input

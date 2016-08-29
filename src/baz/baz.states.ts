@@ -5,11 +5,8 @@ import {BazFooterComponent} from "./bazFooter.component";
 import {Ng2StateDeclaration, Transition} from "ui-router-ng2";
 /**
  * This file defines the states for the `baz` module.
- * The states are exported as an array.
- * The parent module imports this array and concats them into the master state list.
+ * The states are exported as an array and imported in the BazModule.
  */
-
-/** The 'baz' submodule's states. */
 export let BAZ_STATES: Ng2StateDeclaration[] = [
 
   // A state for the 'app.baz' submodule.

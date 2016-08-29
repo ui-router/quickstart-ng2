@@ -1,10 +1,9 @@
 import {Component} from '@angular/core';
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * The top level application component.
  *
- * This component renders two uiSref "links" and has a viewport for a child to fill in.
+ * This component renders three uiSref "links" and has a viewport for a child to fill in.
  */
 
 let template = `
@@ -21,7 +20,6 @@ let template = `
 `;
 
 @Component({
-  directives: [UIROUTER_DIRECTIVES],
   selector: 'my-app',
   template: template
 })

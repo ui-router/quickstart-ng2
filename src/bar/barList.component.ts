@@ -1,5 +1,4 @@
 import {Component, Inject} from '@angular/core';
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * This component has "barList" (resolve data) injected into the constructor.
@@ -12,8 +11,8 @@ let template = `
 <h3>Bar Component</h3>
 
 <ul>
-  <li *ngFor="let bar of bars">
-    <a uiSref=".details" [uiParams]="{barId: bar.id}" uiSrefActive="active">{{bar.name}}</a>
+  <li *ngFor="let bar of bars" uiSrefActive="active">
+    <a uiSref=".details" [uiParams]="{barId: bar.id}">{{bar.name}}</a>
   </li>
 </ul>
 
@@ -21,7 +20,6 @@ let template = `
 `;
 
 @Component({
-    directives: [UIROUTER_DIRECTIVES],
     selector: 'bar',
     template: template
 })

@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * This is a simple component which provides two uiSref (links) to two nested states
@@ -15,7 +14,6 @@ let template = `
 `;
 
 @Component({
-    directives: [UIROUTER_DIRECTIVES],
     selector: 'foo',
     template: template
 })
