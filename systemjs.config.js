@@ -7,7 +7,7 @@
 
   // map tells the System loader where to look for things
   var map = {
-    'app':                        'app', // 'dist',
+    'quickstart':                 'src',
     'ui-router-ng2':              'node_modules/ui-router-ng2/_bundles/ui-router-ng2.js',
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
@@ -16,7 +16,7 @@
 
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
-    'app':                        { main: '_bootstrap/main.js',  defaultExtension: 'js' },
+    'quickstart':                 { main: 'bootstrap.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
   };
@@ -50,6 +50,8 @@
 
 
   var config = {
+    transpiler: false,
+    meta: { "ui-router-ng2": { format: "cjs" } },
     map: map,
     packages: packages
   };

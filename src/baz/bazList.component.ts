@@ -1,5 +1,4 @@
 import {Component, Inject} from '@angular/core';
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * This component injects "bazList" (resolve data)
@@ -20,7 +19,6 @@ let template = `
 `;
 
 @Component({
-  directives: [UIROUTER_DIRECTIVES],
   selector: 'baz',
   template: template
 })

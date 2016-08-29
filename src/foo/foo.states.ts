@@ -5,12 +5,7 @@ import {Ng2StateDeclaration} from "ui-router-ng2";
 import {FooFooterComponent} from "./fooFooter.component";
 /**
  * This file defines the states for the `foo` module.
- * The states are exported as an array.
- * The parent module imports this array and concats them into the master state list.
- */
-
-/**
- * The 'foo' submodule's states.
+ * The states are exported as an array and imported in the FooModule.
  */
 export let FOO_STATES: Ng2StateDeclaration[] = [
     // A state for the 'app.foo' submodule,
@@ -25,9 +20,17 @@ export let FOO_STATES: Ng2StateDeclaration[] = [
     },
 
     // A child state of app.foo; it fills the <ui-view> in app.foo with Nest1Component
-    { name: 'app.foo.nest1', url: '/nest1', component: Nest1Component },
+    { 
+      name: 'app.foo.nest1', 
+      url: '/nest1',
+      component: Nest1Component 
+    },
 
     // A child state of app.foo; it fills the <ui-view> in app.foo with Nest2Component
-    { name: 'app.foo.nest2', url: '/nest2', component: Nest2Component }
+    {
+      name: 'app.foo.nest2',
+      url: '/nest2',
+      component: Nest2Component
+    }
 ];
 

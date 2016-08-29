@@ -8,11 +8,8 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "suppressImplicitAnyIndexErrors": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "lib": [ "es2015", "dom" ]
   },
-  "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
-  ]
+  "include": ["src/bootstrap.ts", "src/baz/baz.module.ts"]
 }
