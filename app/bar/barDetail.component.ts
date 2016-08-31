@@ -14,7 +14,6 @@ let template = `
 @Component({
   selector: 'bar-detail',
   template: template,
-  directives: [UIROUTER_DIRECTIVES]
 })
 export class BarDetailsComponent {
   // `barDetail` resolve data is provided to this @Input

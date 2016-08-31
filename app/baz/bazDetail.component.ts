@@ -19,7 +19,6 @@ let template = `
   template: template,
   // `bazDetail` resolve data is provided to the `bazDetail` input
   inputs: ["bazDetail"],
-  directives: [UIROUTER_DIRECTIVES]
 })
 export class BazDetailsComponent {
   bazDetail;
