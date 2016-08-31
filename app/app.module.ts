@@ -1,19 +1,20 @@
+/**
+ * Created by kolkov on 8/31/2016.
+ */
+
 // Imports for loading & configuring the in-memory web api
 import {HttpModule} from '@angular/http';
-/**
- * Created by ramor11 on 8/10/2016.
- */
-import {NgModule}  from '@angular/core';
 import {BrowserModule}  from '@angular/platform-browser';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
-
-import {trace, UIROUTER_PROVIDERS, UIView, UIRouterConfig, Category, UIROUTER_DIRECTIVES} from "ui-router-ng2";
+import {trace, UIView, UIRouterConfig, Category, UIRouterModule} from "ui-router-ng2";
 import {MyUIRouterConfig} from "./_bootstrap/router.config";
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
-
-
+import {AppComponent} from "./app.component";
+import {FooModule} from "./foo/foo.module";
+import {BazModule} from "./baz/baz.module";
+import {BarModule} from "./bar/bar.module";
 
 
 // Enables tracing (check the console) of:
@@ -21,23 +22,25 @@ import 'rxjs/add/operator/map';
 // - VIEWCONFIG ui-view component creation/destruction and viewconfig de/activation
 trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
-@NgModule({
+let appState =  { name: 'app', component: AppComponent };
+
+@UIRouterModule({
   imports: [
     BrowserModule,
     HttpModule,
+    FooModule,
+    BazModule,
+    BarModule
   ],
   declarations: [
-    UIROUTER_DIRECTIVES
+    /*AppComponent*/
   ],
   providers: [
-    ...UIROUTER_PROVIDERS,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: UIRouterConfig, useClass: MyUIRouterConfig},
-
   ],
-
+  states: [appState],
   bootstrap: [UIView]
-
 })
 export class AppModule {
 }

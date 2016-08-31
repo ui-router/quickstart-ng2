@@ -1,6 +1,5 @@
 import {UIRouter} from "ui-router-ng2";
-import {INITIAL_STATES} from "../app.states";
-import {Injectable, Injector} from "@angular/core";
+import {Injectable} from "@angular/core";
 
 /**
  * Create your own UIRouterConfig class
@@ -12,12 +11,9 @@ import {Injectable, Injector} from "@angular/core";
  */
 @Injectable()
 export class MyUIRouterConfig {
-  constructor(private injector: Injector) {}
+  constructor() {}
 
   configure(uiRouter: UIRouter) {
-    // Register each state definition (from app.states.ts) with the StateRegistry
-    INITIAL_STATES.forEach(state => uiRouter.stateRegistry.register(state));
-
     // Define a default behavior, for when the URL matched no routes
     uiRouter.urlRouterProvider.otherwise(() => uiRouter.stateService.go("app", null, null) && null);
   }

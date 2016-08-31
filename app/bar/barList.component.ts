@@ -21,7 +21,6 @@ let template = `
 `;
 
 @Component({
-    directives: [UIROUTER_DIRECTIVES],
     selector: 'bar',
     template: template
 })

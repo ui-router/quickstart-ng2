@@ -50,6 +50,8 @@
 
 
   var config = {
+    transpiler: false,
+    meta: { "ui-router-ng2": { format: "cjs" } },
     map: map,
     packages: packages
   };

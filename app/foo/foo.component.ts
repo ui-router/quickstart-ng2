@@ -15,7 +15,6 @@ let template = `
 `;
 
 @Component({
-    directives: [UIROUTER_DIRECTIVES],
     selector: 'foo',
     template: template
 })

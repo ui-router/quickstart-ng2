@@ -20,7 +20,6 @@ let template = `
 `;
 
 @Component({
-  directives: [UIROUTER_DIRECTIVES],
   selector: 'baz',
   template: template
 })
