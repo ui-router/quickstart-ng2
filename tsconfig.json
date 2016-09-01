@@ -11,5 +11,5 @@
     "noImplicitAny": false,
     "lib": [ "es2015", "dom" ]
   },
-  "include": ["src/bootstrap.ts"]
+  "include": ["src/bootstrap.ts", "src/baz/baz.module.ts"]
 }

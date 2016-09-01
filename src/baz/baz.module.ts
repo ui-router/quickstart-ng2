@@ -7,4 +7,4 @@ import {BAZ_STATES} from "./baz.states";
   imports: [CommonModule],
   states: BAZ_STATES
 })
-export class BazModule { }
+export default class BazModule { }
