@@ -16,11 +16,10 @@ npm start
 
 - We're using npm and systemjs.  We added a dependency on latest `ui-router-ng2` in [package.json](https://github.com/ui-router/quickstart-ng2/blob/1.0.2/package.json#L19)
 - Import UI-Router classes [directly from `"ui-router-ng2"`](https://github.com/ui-router/quickstart-ng2/blob/1.0.2/app/app.component.ts#L2)
-- When defining a component, [add the `UIROUTER_DIRECTIVES` to `directives:` array](https://github.com/ui-router/quickstart-ng2/blob/1.0.2/app/app.component.ts#L20)
 - Either [bootstrap a `UIView` component](https://github.com/ui-router/quickstart-ng2/blob/1.0.2/app/_bootstrap/bootstrap.ts#L14), or add a `<ui-view></ui-view>` viewport to your root component.
 - [Create application states](https://github.com/ui-router/quickstart-ng2/blob/1.0.2/app/app.states.ts#L16-L20) (as defined by Ng2StateDeclaration]]) which will fill in the `ui-view` viewports with component.
-- Create a `UIRouterConfig`, and [register your states](https://github.com/ui-router/quickstart-ng2/blob/1.0.2/app/_bootstrap/router.config.ts#L17-L18) in the `UIRouterConfig.configure()` function.
-- When bootstrapping: include the `UIROUTER_PROVIDERS` and [define a provider for your `UIRouterConfig`](https://github.com/ui-router/quickstart-ng2/blob/1.0.2/app/_bootstrap/bootstrap.ts#L17-L18)
+- Create a `UIRouterConfig` and apply any router config in the `UIRouterConfig.configure()` function.
+- Bootstrap a `@UIRouterModule`. Provide UI-Router using [the `provideUIRouter` helper](https://github.com/ui-router/quickstart-ng2/blob/c69c19d30fbeb25e99a2d5c3b3fb72866513ab03/src/app.module.ts#L34).
 
 #### Foo module
 
@@ -35,6 +34,7 @@ npm start
 
 #### Baz module
 
+- This module is lazy loaded using a "Future State" with a [`lazyLoad` function](https://ui-router.github.io/docs/latest/interfaces/state.statedeclaration.html#lazyload)
 - Resolve data from server (baz list)
 - Path parameter
 - View targeting (baz detail replaces the baz list) 
