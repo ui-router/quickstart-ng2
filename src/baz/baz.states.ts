@@ -22,13 +22,17 @@ export let BAZ_STATES: Ng2StateDeclaration[] = [
     },
     resolve: [
       // Inject 'Http' and fetch all the baz data
-      { token: 'bazList', deps: [Http], resolveFn: (http: Http) =>
-        http.get('/data/bazData.json').map(res => res.json()).toPromise() }
+      {
+        token: 'bazList',
+        deps: [Http],
+        resolveFn: (http: Http) =>
+          http.get('/data/bazData.json').map(res => res.json()).toPromise()
+      }
     ]
   },
 
   // A child state of app.baz
-  // - This state fills the unnnamed ($default) <ui-view> (in the `AppComponent` from  `app` state) with
+  // - This state fills the unnamed ($default) <ui-view> (in the `AppComponent` from  `app` state) with
   // `BazDetailsComponent`. This effectively replaces the baz list view with a baz detail view.
   // - Has a path parameter :bazId which appears in the URL
   // - Resolves bazDetail, then the component displays the data
@@ -40,8 +44,12 @@ export let BAZ_STATES: Ng2StateDeclaration[] = [
     },
     resolve: [
       // Inject the bazList (from the parent) and find the correct
-      { token: 'bazDetail', deps: ['bazList', Transition], resolveFn: (bazList, trans) =>
-          bazList.find(item => item.id == trans.params().bazId) }
+      {
+        token: 'bazDetail',
+        deps: ['bazList', Transition],
+        resolveFn: (bazList, trans) =>
+          bazList.find(item => item.id == trans.params().bazId)
+      }
     ]
   },
 ];

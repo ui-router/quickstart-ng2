@@ -3,28 +3,16 @@ import {Injectable} from "@angular/core";
 declare var SystemJS;
 
 /**
- * Create your own UIRouterConfig class
+ * Create your own configuration class (if necessary) for any root/feature/lazy module.
  *
- * This class should be added to the Angular 2 bootstrap() providers and is
- * injected by the UIRouter provider.
+ * Pass it to the UIRouterModule.forRoot/forChild factory methods as `configClass`.
  *
- * The UIRouter provider will then invoke this class's configure() function
- * and pass in the UIRouter instance.
- *
- * The configure() function performs any ui-router configuration.
- *
- * Then, UIRouter registers all the root UIRouterModule states and syncs
- * with the current URL.
+ * The class will be added to the Injector and instantiate when the module loads.
  */
 @Injectable()
-export class MyUIRouterConfig {
+export class MyRootUIRouterConfig {
   /** You may inject dependencies into the constructor */
-  constructor() { }
-
-  configure(uiRouter: UIRouter) {
-    // Define a default behavior, for when the URL matched no routes
-    uiRouter.urlRouterProvider.otherwise(() => uiRouter.stateService.go("app") && null );
-
+  constructor(uiRouter: UIRouter) {
     // Show the ui-router visualizer
     // Need to improve this example ;)
     SystemJS.import('node_modules/ui-router-visualizer/release/visualizer.min.js').then(vis => {

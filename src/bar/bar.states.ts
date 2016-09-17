@@ -21,8 +21,12 @@ export let BAR_STATES: Ng2StateDeclaration[] = [
         },
         resolve: [
           // Inject 'http' and fetch all the bar data
-          { token: 'barList', deps: [Http], resolveFn: (http: Http) =>
-            http.get('/data/barData.json').map(res => res.json()).toPromise() }
+          {
+            token: 'barList',
+            deps: [Http],
+            resolveFn: (http: Http) =>
+              http.get('/data/barData.json').map(res => res.json()).toPromise()
+          }
         ]
     },
 
@@ -34,8 +38,12 @@ export let BAR_STATES: Ng2StateDeclaration[] = [
       name: 'app.bar.details', url: '/?barId', component: BarDetailsComponent,
       resolve: [
         // Inject the barList (from the parent) and find the correct
-        { token: 'barDetail', deps: ['barList', Transition], resolveFn: (barList, trans) =>
-              barList.find(item => item.id == trans.params().barId) }
+        {
+          token: 'barDetail',
+          deps: ['barList', Transition],
+          resolveFn: (barList, trans) =>
+            barList.find(item => item.id == trans.params().barId)
+        }
       ]
     },
 ];
