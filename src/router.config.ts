@@ -14,9 +14,7 @@ export class MyRootUIRouterConfig {
   /** You may inject dependencies into the constructor */
   constructor(uiRouter: UIRouter) {
     // Show the ui-router visualizer
-    // Need to improve this example ;)
-    SystemJS.import('node_modules/ui-router-visualizer/release/visualizer.min.js').then(vis => {
-      vis.visualizer(uiRouter);
-    })
+    let vis = window['ui-router-visualizer'];
+    vis.visualizer(uiRouter);
   }
 }

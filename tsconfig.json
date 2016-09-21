@@ -9,7 +9,7 @@
     "removeComments": false,
     "suppressImplicitAnyIndexErrors": true,
     "noImplicitAny": false,
-    "lib": [ "es2015", "dom" ]
+    "lib": [ "es6", "dom" ]
   },
   "include": ["src/bootstrap.ts", "src/baz/baz.module.ts"]
 }
