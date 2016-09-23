@@ -1,6 +1,6 @@
 {
   "name": "ui-router-ng2-quickstart",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "start": "npm run tsc && npm run watch",
     "tsc": "tsc",
