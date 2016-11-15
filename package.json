@@ -30,6 +30,7 @@
     "zone.js": "^0.6.21"
   },
   "devDependencies": {
+    "@types/chai": "^3.4.34",
     "lite-server": "^2.1.0",
     "npm-run-all": "^3.1.1",
     "shx": "^0.1.4",
