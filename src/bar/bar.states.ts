@@ -17,7 +17,7 @@ export let BAR_STATES: Ng2StateDeclaration[] = [
         url: '/bar',
         views: {
             $default: { component: BarListComponent },
-            footer: BarFooterComponent
+            footer: { component: BarFooterComponent }
         },
         resolve: [
           // Inject 'http' and fetch all the bar data
