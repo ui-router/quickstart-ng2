@@ -24,7 +24,7 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
       states: MAIN_STATES,
       otherwise: { state: 'app', params: {} },
       useHash: true,
-      configClass: MyRootUIRouterConfig
+      config: MyRootUIRouterConfig
     }),
     FooModule,
     BarModule,

@@ -1,5 +1,4 @@
 import {UIRouter} from "ui-router-ng2";
-import {Injectable} from "@angular/core";
 declare var SystemJS;
 
 /**
@@ -9,12 +8,9 @@ declare var SystemJS;
  *
  * The class will be added to the Injector and instantiate when the module loads.
  */
-@Injectable()
-export class MyRootUIRouterConfig {
+export function MyRootUIRouterConfig(uiRouter: UIRouter) {
   /** You may inject dependencies into the constructor */
-  constructor(uiRouter: UIRouter) {
-    // Show the ui-router visualizer
-    let vis = window['ui-router-visualizer'];
-    vis.visualizer(uiRouter);
-  }
+  // Show the ui-router visualizer
+  let vis = window['ui-router-visualizer'];
+  vis.visualizer(uiRouter);
 }
