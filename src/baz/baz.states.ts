@@ -2,7 +2,7 @@ import {Http} from "@angular/http";
 import {BazListComponent} from "./bazList.component";
 import {BazDetailsComponent} from "./bazDetail.component";
 import {BazFooterComponent} from "./bazFooter.component";
-import {Ng2StateDeclaration, Transition} from "ui-router-ng2";
+import {Ng2StateDeclaration, Transition} from "@uirouter/angular";
 /**
  * This file defines the states for the `baz` module.
  * The states are exported as an array and imported in the BazModule.

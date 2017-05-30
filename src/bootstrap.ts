@@ -2,7 +2,7 @@ import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {trace, Category, UIRouterModule, UIView} from "ui-router-ng2";
+import {trace, Category, UIRouterModule, UIView} from "@uirouter/angular";
 import {NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 
@@ -10,7 +10,7 @@ import {MAIN_STATES} from "./app.states";
 import {AppComponent} from "./app.component";
 import {FooModule} from "./foo/foo.module";
 import {BarModule} from "./bar/bar.module";
-import {MyRootUIRouterConfig} from "./router.config";
+import {routerConfig} from "./router.config";
 
 // Enables tracing (check the console) of:
 // - TRANSITION transition start, redirect, success, error, ignored
@@ -24,7 +24,7 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
       states: MAIN_STATES,
       otherwise: { state: 'app', params: {} },
       useHash: true,
-      configClass: MyRootUIRouterConfig
+      config: routerConfig,
     }),
     FooModule,
     BarModule,

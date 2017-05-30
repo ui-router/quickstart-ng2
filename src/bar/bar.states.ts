@@ -2,7 +2,7 @@ import {Http} from "@angular/http";
 import {BarListComponent} from "./barList.component";
 import {BarDetailsComponent} from "./barDetail.component";
 import {BarFooterComponent} from "./barFooter.component";
-import {Ng2StateDeclaration, Transition} from "ui-router-ng2";
+import {Ng2StateDeclaration, Transition} from "@uirouter/angular";
 /**
  * This file defines the states for the `bar` module.
  * The states are exported as an array and imported in the BarModule.

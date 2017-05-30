@@ -8,7 +8,8 @@
   // map tells the System loader where to look for things
   var map = {
     'quickstart':                 'src',
-    'ui-router-ng2':              'node_modules/ui-router-ng2/_bundles/ui-router-ng2.js',
+    '@uirouter/angular':          'node_modules/@uirouter/angular/_bundles/ui-router-ng2.js',
+    '@uirouter/core':             'node_modules/@uirouter/core/lib',
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular'
@@ -19,6 +20,7 @@
     'quickstart':                 { main: 'bootstrap.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
+    '@uirouter/core': { main: 'index.js', defaultExtension: 'js' },
   };
 
   var ngPackageNames = [

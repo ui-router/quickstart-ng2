@@ -1,5 +1,5 @@
 import {AppComponent} from "./app.component";
-import {Ng2StateDeclaration, loadNgModule} from "ui-router-ng2";
+import {Ng2StateDeclaration, loadNgModule} from "@uirouter/angular";
 
 /** The top level state(s) */
 export let MAIN_STATES: Ng2StateDeclaration[] = [
@@ -8,5 +8,5 @@ export let MAIN_STATES: Ng2StateDeclaration[] = [
     { name: 'app', component: AppComponent },
 
     // This is the Future State for lazy loading the BazModule
-    { name: 'app.baz', url: '/baz', lazyLoad: loadNgModule('src/baz/baz.module') }
+    { name: 'app.baz.**', url: '/baz', lazyLoad: loadNgModule('src/baz/baz.module') }
 ];

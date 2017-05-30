@@ -1,7 +1,7 @@
 import {FooComponent} from "./foo.component";
 import {Nest1Component} from "./nest1.component";
 import {Nest2Component} from "./nest2.component";
-import {Ng2StateDeclaration} from "ui-router-ng2";
+import {Ng2StateDeclaration} from "@uirouter/angular";
 import {FooFooterComponent} from "./fooFooter.component";
 /**
  * This file defines the states for the `foo` module.

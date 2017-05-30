@@ -1,4 +1,4 @@
-import {UIRouterModule} from "ui-router-ng2";
+import {UIRouterModule} from "@uirouter/angular";
 import {FOO_STATES} from "./foo.states";
 import {SharedModule} from "../shared.module";
 import {NgModule} from "@angular/core";
