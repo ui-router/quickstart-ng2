@@ -1,5 +1,7 @@
 # UI-Router for Angular 2 QuickStart Source
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ui-router/quickstart-ng2.svg)](https://greenkeeper.io/)
+
 ### Start development
 
 Install the npm packages described in the `package.json` and verify that it works:
