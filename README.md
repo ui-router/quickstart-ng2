@@ -1,3 +1,7 @@
+# Deprecated in favor of Angular-CLI starter: https://github.com/ui-router/quickstart-angular
+
+
+
 # UI-Router for Angular 2 QuickStart Source
 
 ### Start development
